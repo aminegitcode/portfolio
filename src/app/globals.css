@@ -1,67 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  --background: 222 47% 6%;
-  --foreground: 210 40% 98%;
+  /* Colors */
+  --color-background: hsl(222 47% 6%);
+  --color-foreground: hsl(210 40% 98%);
 
-  --primary: 174 85% 53%;
-  --secondary: 222 47% 12%;
+  --color-primary: hsl(150 85% 53%);
+  --color-primary-foreground: hsl(222 47% 6%);
 
-  --accent: 187 85% 53%;
+  --color-secondary: hsl(222 47% 12%);
+  --color-secondary-foreground: hsl(210 40% 98%);
 
-  --muted: 222 30% 15%;
-  --muted-foreground: 215 20% 65%;
+  --color-accent: hsl(187 85% 53%);
+  --color-accent-foreground: hsl(210 40% 98%);
 
-  --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(220 85% 60%) 100%);
+  --color-muted: hsl(222 30% 15%);
+  --color-muted-foreground: hsl(215 20% 65%);
 
-  --glass-bg: hsl(222 47% 10% / 0.6);      
-  --glass-border: hsl(var(--primary)/ 0.1);   
+  --color-border: hsl(222 47% 15%);
+  --color-input: hsl(222 47% 12%);
+  --color-ring: hsl(174 85% 53%);
 
+  --color-card: hsl(222 47% 10%);
+  --color-card-foreground: hsl(210 40% 98%);
 
-  --glow-primary: 0 0 40px hsl(var(--primary) / 0.3); 
-  --glow-soft: 0 0 20px hsl(var(--primary)/ 0.15);    
+  --font-sans: "Inter", Arial, Helvetica, sans-serif;
 
+  
 }
 
-@layer components{
+
+
+@layer components {
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
+    background-image: linear-gradient(135deg, var(--color-primary) 10%, hsl(220 85% 60%) 100%);
   }
 
- 
-
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4;
+    @apply text-3xl md:text-4xl font-bold mb-4 text-foreground;
   }
 
   .section-subtitle {
-    @apply  text-lg mb-12;
-    color: hsl(var(--muted-foreground));  
+    @apply text-lg mb-12 text-muted-foreground;
   }
 
-  
   .glass-card {
     @apply backdrop-blur-xl border rounded-xl p-6;
-    background: var(--glass-bg);
-    border-color: var(--glass-border);
+    background: color-mix(in srgb, var(--color-card) 60%, transparent);
+    border-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
   }
 
   .glow-box {
-    box-shadow: var(--glow-primary);
+    box-shadow: 0 0 40px color-mix(in srgb, var(--color-primary) 30%, transparent);
   }
-
-  .glow-soft {
-    box-shadow: var(--glow-soft);
-  }
-
-
 }
 
-
-
 @layer utilities {
- 
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
@@ -70,12 +65,13 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
-
-  
-
 }
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground font-sans;
+  font-family: 'Inter', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
