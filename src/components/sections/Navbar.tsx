@@ -3,11 +3,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const { language, toggleLanguage } = useLanguage();
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -33,25 +34,25 @@ const Navbar = () => {
         isScrolled ? "glass-card  border-b border-gray-800/40" : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className=" mx-auto px-6">
+      <div className=" container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo */}
           <motion.a
             href="#"
-            className="font-bold text-xl gradient-text"
+            className="font-bold text-xl gradient-text pr-3"
             whileHover={{ scale: 1.05 }}
           >
             Portfolio
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center lg:gap-1">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="px-3 lg:px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
