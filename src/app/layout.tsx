@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="" >
         <LanguageProvider>
           <Navbar />
-          <main className="pt-16">
+          <main className="">
             {children}
           </main>
         </LanguageProvider>

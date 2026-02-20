@@ -1,10 +1,11 @@
 'use client'
-import { Button } from "@/components/ui/Button";
+import Hero from "@/components/sections/Hero";
+
 
 export default function Home() {
   return (
-    <div className="mx-auto">
-
+    <div className="">
+        <Hero/>
     </div>
   );
 }

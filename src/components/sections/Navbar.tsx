@@ -74,13 +74,13 @@ const navLinks = Links[language];
                 {link.label}
               </a>
             ))}
-            {/* Toggle langue */}
+            {/* Toggle language */}
             <Button
               variant="secondary"
               onClick={toggleLanguage}
               className="px-3 py-1= text-xs  lg:ml-5 bg-secondary/50 transition-colors"
             >
-              {language === "fr" ? "EN" : "FR"}
+              {language === "fr" ? "FR" : "EN"}
             </Button>
           </div>
 

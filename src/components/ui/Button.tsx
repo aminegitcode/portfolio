@@ -22,7 +22,7 @@ const variants = {
 const sizes = {
   sm: "px-3 py-1 text-sm",
   md: "px-4 py-2 text-sm",
-  lg: "px-15 h-11 text-base",
+  lg: "px-10 h-11 text-base",
 };
 
 export const Button = ({
