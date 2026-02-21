@@ -11,7 +11,6 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
 
-  
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -19,27 +18,27 @@ const Navbar = () => {
   }, []);
 
   const Links = {
-  fr: [
-    { href: "#about", label: "À propos" },
-    { href: "#skills", label: "Compétences" },
-    { href: "#education", label: "Formation" },
-    { href: "#experience", label: "Expériences" },
-    { href: "#projects", label: "Projets" },
-    { href: "#certificates", label: "Certificats" },
-    { href: "#contact", label: "Contact" },
-  ],
-  en: [
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#education", label: "Education" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#certificates", label: "Certificates" },
-    { href: "#contact", label: "Contact" },
-  ],
-};
+    fr: [
+      { href: "#about", label: "À propos" },
+      { href: "#skills", label: "Compétences" },
+      { href: "#education", label: "Formation" },
+      { href: "#experience", label: "Expériences" },
+      { href: "#projects", label: "Projets" },
+      { href: "#certificates", label: "Certificats" },
+      { href: "#contact", label: "Contact" },
+    ],
+    en: [
+      { href: "#about", label: "About" },
+      { href: "#skills", label: "Skills" },
+      { href: "#education", label: "Education" },
+      { href: "#experience", label: "Experience" },
+      { href: "#projects", label: "Projects" },
+      { href: "#certificates", label: "Certificates" },
+      { href: "#contact", label: "Contact" },
+    ],
+  };
 
-const navLinks = Links[language];
+  const navLinks = Links[language];
 
   return (
     <motion.nav
@@ -85,12 +84,21 @@ const navLinks = Links[language];
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
-            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          >
-            {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="px-6 lg:hidden flex items-center  pt-2 pb-1  mt-2">
+            <Button
+              variant="secondary"
+              onClick={toggleLanguage}
+              className="px-3 py-1= text-xs  lg:ml-5 bg-secondary/50 transition-colors"
+            >
+              {language === "fr" ? "EN" : "FR"}
+            </Button>
+            <button
+              className="lg:hidden p-2 text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -101,7 +109,7 @@ const navLinks = Links[language];
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden overflow-hidden border-t border-gray-800/50"
+              className="lg:hidden overflow-hidden border-t glass-card  border-gray-800/50"
             >
               <div className="py-2">
                 {navLinks.map((link, index) => (
@@ -117,16 +125,6 @@ const navLinks = Links[language];
                     {link.label}
                   </motion.a>
                 ))}
-
-                <div className="px-6 pt-2 pb-1 border-t border-gray-800/50 mt-2">
-                  <Button
-                    variant="secondary"
-                    onClick={toggleLanguage}
-                    className="px-3 py-1= text-xs  lg:ml-5 bg-secondary/50 transition-colors"
-                  >
-                    {language === "fr" ? "EN" : "FR"}
-                  </Button>
-                </div>
               </div>
             </motion.div>
           )}
