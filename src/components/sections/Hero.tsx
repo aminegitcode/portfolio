@@ -46,7 +46,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-110 h-110 bg-primary/12 rounded-full blur-3xl animate-glow-pulse" />
+        <div className="absolute top-1/4 left-1/4 w-100 h-100 bg-primary/12 rounded-full blur-3xl animate-glow-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
       </div>
 
