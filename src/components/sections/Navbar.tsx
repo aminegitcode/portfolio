@@ -83,8 +83,8 @@ const Navbar = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="px-6 lg:hidden flex items-center  pt-2 pb-1  mt-2">
+          {/* Mobile Menu and language toggle Button */}
+          <div className=" lg:hidden flex items-center    ">
             <Button
               variant="secondary"
               onClick={toggleLanguage}

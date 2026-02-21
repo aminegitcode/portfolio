@@ -45,8 +45,10 @@ const Hero = () => {
       {/* Background elements */}
 
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-1/4 left-1/4 w-110 h-110 bg-primary/12 rounded-full blur-3xl animate-glow-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: '1.5s' }} />
+      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -94,9 +96,9 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8"
           >
-            {language==="fr"?"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nost libero ipsum vero in optio dignissimos assumenda enim":
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nost libero ipsum vero in optio dignissimos assumenda enim"}
-            
+            {language === "fr"
+              ? "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nost libero ipsum vero in optio dignissimos assumenda enim"
+              : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nost libero ipsum vero in optio dignissimos assumenda enim"}
           </motion.p>
 
           <motion.div
@@ -116,10 +118,9 @@ const Hero = () => {
               </Button>
             </a>
             <a href="#projects">
-
-            <Button variant="outline" size="lg" className="">
-              {language === "fr" ? "Voir mes projets" : "See my work"}
-            </Button>
+              <Button variant="outline" size="lg" className="">
+                {language === "fr" ? "Voir mes projets" : "See my work"}
+              </Button>
             </a>
           </motion.div>
 
@@ -127,7 +128,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex justify-center gap-6 mb-12"
+            className="flex justify-center gap-6 mb-5"
           >
             <a
               href="#"
@@ -154,15 +155,16 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="absolute  left-1/2 -translate-x-1/2"
+          className=" absolute  left-1/2 -translate-x-1/2"
         >
-          <motion.a
-            href="#about"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-          >
-            <ArrowDown className="h-6 w-6 mb-1 hover:cursor-pointer text-primary" />
-          </motion.a>
+          <a href="#about">
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 2 }}
+            >
+              <ArrowDown className="h-6 w-6 mb-1 hover:cursor-pointer text-primary" />
+            </motion.div>
+          </a>
         </motion.div>
       </div>
     </section>
