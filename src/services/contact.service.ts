@@ -1,11 +1,6 @@
 import { supabase } from "@/lib/supabase";
+import type { Contact } from "@/types";
 
-type Contact = {
-  name: string;
-  email: string;
-  message: string;
-  subject: string | null;
-};
 
 export const sendContact = async (contact: Contact) => {
   const { error } = await supabase

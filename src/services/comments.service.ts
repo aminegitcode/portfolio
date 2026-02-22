@@ -1,9 +1,5 @@
 import { supabase } from "@/lib/supabase";
-
-type Comment = {
-  name: string;
-  message: string;
-};
+import type { Comment } from "@/types";
 
 //read
 export const getComments = async () => {

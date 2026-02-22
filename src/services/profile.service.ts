@@ -1,20 +1,5 @@
 import { supabase } from "@/lib/supabase";
-
-type Profile = {
-  id: number;
-  full_name: string;
-  subtitle: string;
-  subtitle_en: string;
-  hero_texts: string[];
-  hero_texts_en: string[];
-  bio: string;
-  bio_en: string;
-  email: string;
-  github_url: string;
-  linkedin_url: string;
-  photo_url: string;
-  created_at: string;
-};
+import type { Profile } from "@/types";
 
 export const getProfile = async () => {
   const { data, error } = await supabase
