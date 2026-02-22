@@ -14,7 +14,7 @@ export default function RootLayout({
         <LanguageProvider>
           <ProfileProvider>
             <Navbar />
-            <main className="pt-16">{children}</main>
+            <main>{children}</main>
           </ProfileProvider>
         </LanguageProvider>
       </body>
