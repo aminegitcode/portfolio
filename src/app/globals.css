@@ -64,8 +64,8 @@
 @layer utilities {
   .bg-grid-pattern {
     background-image: 
-      linear-gradient(to right, hsl(240 5.9% 90% / 0.3) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(240 5.9% 90% / 0.3) 1px, transparent 1px);
+      linear-gradient(to right, hsl(240 5.9% 90% / 0.3) 2px, transparent 1px),
+      linear-gradient(to bottom, hsl(240 5.9% 90% / 0.3) 2px, transparent 1px);
     background-size: 60px 60px;
   }
   .animate-float {
