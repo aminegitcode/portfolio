@@ -75,9 +75,9 @@ const Navbar = () => {
             ))}
             {/* Toggle language */}
             <Button
-              variant="secondary"
+              variant="ghost"
               onClick={toggleLanguage}
-              className="px-3 py-1= text-xs  lg:ml-5 bg-secondary/50 transition-colors"
+              className="px-3 py-1= text-xs  lg:ml-5 bg-muted transition-colors"
             >
               {language === "fr" ? "FR" : "EN"}
             </Button>
@@ -86,9 +86,9 @@ const Navbar = () => {
           {/* Mobile Menu and language toggle Button */}
           <div className=" lg:hidden flex items-center    ">
             <Button
-              variant="secondary"
+              variant="ghost"
               onClick={toggleLanguage}
-              className="px-3 py-1= text-xs  lg:ml-5 bg-secondary/50 transition-colors"
+              className="px-3 py-2 text-xs  lg:ml-5 bg-muted transition-colors"
             >
               {language === "fr" ? "EN" : "FR"}
             </Button>

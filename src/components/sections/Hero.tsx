@@ -6,6 +6,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { useEffect, useState } from "react";
 import { useProfile } from "@/context/ProfileContext";
 
+
 const AnimatedText = ({ phrases }: { phrases: string[] }) => {
   const [index, setIndex] = useState(0);
 
@@ -45,12 +46,12 @@ const Hero = () => {
     : profile?.hero_texts_en ?? [];
 
   return (
-    <section className="min-h-screen  flex items-center justify-center relative overflow-hidden">
+    <section className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
 
       {/* Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-8" />
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-100 h-100 bg-primary/12 rounded-full blur-3xl animate-glow-pulse" />
+        <div className="absolute top-1/4 left-1/4 w-100 h-100 bg-primary/8 rounded-full blur-3xl animate-glow-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
       </div>
 
@@ -80,7 +81,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-6xl md:text-7xl font-bold mb-2"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2"
           >
             {language === "fr" ? "Je suis " : "I'm "}
             <span className="gradient-text">{profile?.full_name}</span>
@@ -91,7 +92,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="text-3xl mb-5"
+            className="text-xl md:text-3xl mb-5"
           >
             <AnimatedText phrases={phrases} />
           </motion.div>
@@ -101,7 +102,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl text-muted-foreground max-w-3xl mx-auto mb-7"
+            className="text-md md:text-xl text-muted-foreground   max-w-3xl mx-auto mb-7"
           >
             {language === "fr" ? profile?.subtitle : profile?.subtitle_en}
           </motion.p>
@@ -154,11 +155,11 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="absolute left-1/2 -translate-x-1/2"
+          className="absolute left-1/2 -translate-x-1/2 "
         >
           <a href="#about">
             <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2 }}>
-              <ArrowDown className="h-6 w-6 mb-1 hover:cursor-pointer text-primary" />
+              <ArrowDown className="h-6 w-6 mb-1 hover:cursor-pointer  text-primary" />
             </motion.div>
           </a>
         </motion.div>

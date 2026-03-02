@@ -7,7 +7,7 @@ export type Profile = {
   subtitle_en: string;
   hero_texts: string[];
   hero_texts_en: string[];
-  bio: string;
+  bio: string[];
   bio_en: string;
   email: string;
   github_url: string;
