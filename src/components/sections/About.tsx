@@ -24,44 +24,52 @@ const AboutSection = () => {
       {
         icon: Code,
         title: "Code propre",
-        description: "J'écris un code lisible et maintenable, avec le souci du détail et des bonnes pratiques.",
+        description:
+          "J'écris un code lisible et maintenable, avec le souci du détail et des bonnes pratiques.",
       },
       {
         icon: Lightbulb,
         title: "Innovation",
-        description: "Je cherche toujours les solutions les plus modernes et efficaces pour résoudre les problèmes.",
+        description:
+          "Je cherche toujours les solutions les plus modernes et efficaces pour résoudre les problèmes.",
       },
       {
         icon: Shield,
         title: "Sécurité",
-        description: "Je construis mes projets avec une vision orientée cybersécurité, ma future spécialité.",
+        description:
+          "Je construis mes projets avec une vision orientée cybersécurité, ma future spécialité.",
       },
       {
         icon: TrendingUp,
         title: "Progression",
-        description: "En constante évolution, je monte en compétences chaque jour pour atteindre mes ambitions.",
+        description:
+          "En constante évolution, je monte en compétences chaque jour pour atteindre mes ambitions.",
       },
     ],
     en: [
       {
         icon: Code,
         title: "Clean Code",
-        description: "I write readable and maintainable code, with attention to detail and best practices.",
+        description:
+          "I write readable and maintainable code, with attention to detail and best practices.",
       },
       {
         icon: Lightbulb,
         title: "Innovation",
-        description: "I always look for the most modern and efficient solutions to solve problems.",
+        description:
+          "I always look for the most modern and efficient solutions to solve problems.",
       },
       {
         icon: Shield,
         title: "Security",
-        description: "I build my projects with a cybersecurity mindset, my future specialty.",
+        description:
+          "I build my projects with a cybersecurity mindset, my future specialty.",
       },
       {
         icon: TrendingUp,
         title: "Growth",
-        description: "Constantly evolving, I level up my skills every day to reach my ambitions.",
+        description:
+          "Constantly evolving, I level up my skills every day to reach my ambitions.",
       },
     ],
   };
@@ -71,9 +79,11 @@ const AboutSection = () => {
   if (loading) return null;
 
   return (
-    <section id="about" className="py-10 bg-gradient-to-b from-background/60 to-background/20 relative">
+    <section
+      id="about"
+      className="py-10 bg-gradient-to-b from-background/60 to-background/20 relative"
+    >
       <div className="container mx-auto px-6">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,9 +94,13 @@ const AboutSection = () => {
         >
           <h2 className="mb-3 text-3xl lg:text-4xl font-semibold">
             {language === "fr" ? (
-              <><span className="text-primary glow-text">À propos</span> de moi</>
+              <>
+                <span className="text-primary glow-text">À propos</span> de moi
+              </>
             ) : (
-              <>About <span className="text-primary glow-text">me</span></>
+              <>
+                About <span className="text-primary glow-text">me</span>
+              </>
             )}
           </h2>
           <p className="section-subtitle max-w-3xl text-sm lg:text-lg mx-auto">
@@ -98,7 +112,6 @@ const AboutSection = () => {
 
         {/* Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-
           {/* Bio */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -133,7 +146,11 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-xl" />
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="relative"
               >
                 <div className="w-65 h-65 md:w-70 md:h-70 lg:w-86 lg:h-86 rounded-full border-gradient p-1">
@@ -150,7 +167,9 @@ const AboutSection = () => {
                   className="absolute -top-2 -right-16 lg:top-1/3 px-4 py-2 glass-card rounded-full text-sm font-medium"
                 >
                   <span className="text-primary">+5</span>{" "}
-                  {language === "fr" ? "ans d'expérience" : "years of experience"}
+                  {language === "fr"
+                    ? "ans d'expérience"
+                    : "years of experience"}
                 </motion.div>
 
                 <motion.div
@@ -182,7 +201,7 @@ const AboutSection = () => {
           <blockquote className="text-gray-200 italic font-semibold text-sm relative z-10 pl-9">
             {language === "fr"
               ? "\"La sécurité n'est pas une option, c'est une responsabilité.\""
-              : "\"Security is not an option, it is a responsibility\""}
+              : '"Security is not an option, it is a responsibility"'}
           </blockquote>
         </motion.div>
 
@@ -194,13 +213,27 @@ const AboutSection = () => {
           transition={{ duration: 0.6 }}
           className="mt-5 flex flex-col sm:flex-row gap-3"
         >
-          <Button variant="primary" size="lg" className="flex justify-center items-center gap-3">
-            <Newspaper className="w-5 h-5" />
-            {language === "fr" ? "Télécharger CV" : "Download CV"}
-          </Button>
+          <a
+             href={profile?.cv_url ? `${profile.cv_url}?download=CV_AMINE_DJABRI.pdf` : "#"}
+  target="_blank"
+  rel="noopener noreferrer"
+          >
+            <Button
+              variant="primary"
+              size="lg"
+              className="flex justify-center items-center gap-3"
+            >
+              <Newspaper className="w-5 h-5" />
+              {language === "fr" ? "Télécharger CV" : "Download CV"}
+            </Button>
+          </a>
 
           <a href="#projects" className="sm:w-auto w-full">
-            <Button variant="outline" size="lg" className="w-full flex justify-center items-center gap-3">
+            <Button
+              variant="outline"
+              size="lg"
+              className="w-full flex justify-center items-center gap-3"
+            >
               <Code className="w-5 h-5" />
               {language === "fr" ? "Voir mes projets" : "See my projects"}
             </Button>
@@ -208,10 +241,9 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Bottom items */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-15">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-10">
           {highlights.map((item, index) => (
             <Card key={item.title} index={index}>
-
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2 rounded-lg bg-primary/10">
                   <item.icon className="text-primary w-5 h-5" />
@@ -221,11 +253,9 @@ const AboutSection = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
-            
-          </Card>
+            </Card>
           ))}
         </div>
-
       </div>
     </section>
   );

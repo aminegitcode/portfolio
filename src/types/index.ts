@@ -13,6 +13,7 @@ export type Profile = {
   github_url: string;
   linkedin_url: string;
   photo_url: string;
+  cv_url:string;
 };
 
 export type Project = {
