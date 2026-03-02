@@ -2,7 +2,7 @@
 import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/utils/utils";
 
-type ButtonVariant = "primary" | "secondary" | "ghost" | "outline";
+type ButtonVariant = "primary" | "secondary"|"gradient" | "ghost" | "outline";
 type ButtonSize = "sm" | "md" | "lg";
 
 type ButtonProps = {
@@ -14,6 +14,7 @@ type ButtonProps = {
 
 const variants = {
   primary: "bg-primary text-primary-foreground hover:opacity-90",
+  gradient: "bg-gradient-to-br from-primary to-secondary text-primary-foreground hover:opacity-90",
   secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
   ghost: "text-muted-foreground hover:text-foreground hover:bg-secondary/50",
   outline: "border border-primary/50 bg-background text-foreground hover:bg-primary/10",

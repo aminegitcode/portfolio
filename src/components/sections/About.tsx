@@ -95,11 +95,11 @@ const AboutSection = () => {
           <h2 className="mb-3 text-3xl lg:text-4xl font-semibold">
             {language === "fr" ? (
               <>
-                <span className="text-primary glow-text">À propos</span> de moi
+                <span className="gradient-text glow-text">À propos</span> de moi
               </>
             ) : (
               <>
-                About <span className="text-primary glow-text">me</span>
+                About <span className="gradient-text glow-text">me</span>
               </>
             )}
           </h2>
@@ -219,7 +219,7 @@ const AboutSection = () => {
   rel="noopener noreferrer"
           >
             <Button
-              variant="primary"
+              variant="gradient"
               size="lg"
               className="flex justify-center items-center gap-3"
             >

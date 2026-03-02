@@ -5,10 +5,10 @@
   --color-background: hsl(180 40% 3%);
   --color-foreground: hsl(210 40% 98%);
 
-  --color-primary: hsl(180 76% 50%);
+  --color-primary: hsl(185 76% 50%);
   --color-primary-foreground: hsl(222 47% 6%);
 
-  --color-secondary: hsl(230 85% 60%) ;
+  --color-secondary: hsl(170 85% 60%) ;
   --color-secondary-foreground: hsl(210 40% 98%);
 
 
@@ -35,6 +35,7 @@
       120deg,var(--color-primary) 30%,
       var(--color-secondary) 100%
     );
+   
   }
   .box-gradient{
     background-image: linear-gradient(
