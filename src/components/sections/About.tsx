@@ -79,10 +79,9 @@ const AboutSection = () => {
   if (loading) return null;
 
   return (
-    <section
-      id="about"
-      className="py-10 bg-gradient-to-b from-background/60 to-background/20 relative"
-    >
+    <section id="about" className="py-10 bg-background/20 relative">
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-primary/4 to-transparent"/>
+
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -214,9 +213,13 @@ const AboutSection = () => {
           className="mt-5 flex flex-col sm:flex-row gap-3"
         >
           <a
-             href={profile?.cv_url ? `${profile.cv_url}?download=CV_AMINE_DJABRI.pdf` : "#"}
-  target="_blank"
-  rel="noopener noreferrer"
+            href={
+              profile?.cv_url
+                ? `${profile.cv_url}?download=CV_AMINE_DJABRI.pdf`
+                : "#"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <Button
               variant="gradient"
