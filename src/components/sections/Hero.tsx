@@ -4,8 +4,8 @@ import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/context/LanguageContext";
 import { useEffect, useState } from "react";
-import { useProfile } from "@/context/ProfileContext";
 
+import type { Profile } from "@/types";
 
 const AnimatedText = ({ phrases }: { phrases: string[] }) => {
   const [index, setIndex] = useState(0);
@@ -34,12 +34,12 @@ const AnimatedText = ({ phrases }: { phrases: string[] }) => {
     </div>
   );
 };
+type HeroProps = { profile: Profile };
+const Hero = ({ profile }: HeroProps) => {
 
-const Hero = () => {
-  const { profile, loading } = useProfile();
   const { language } = useLanguage();
 
-  if (loading) return null;
+
 
   const phrases = language === "fr"
     ? profile?.hero_texts ?? []
@@ -52,7 +52,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-grid-pattern opacity-8" />
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 md:left-1/4 h-70 w-70 md:w-100 md:h-100 bg-primary/8 rounded-full blur-3xl animate-glow-pulse" />
-        <div className="absolute bottom-1/4 right-1 mf:right-1/4 w-50 h-50 md:w-80 md:h-80 bg-primary/10 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute bottom-1/4 right-1 md:right-1/4 w-50 h-50 md:w-80 md:h-80 bg-primary/10 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "1.5s" }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

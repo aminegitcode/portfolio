@@ -18,7 +18,7 @@ function Card({children,className,index=0}: CardProps) {
               transition={{ delay: index * 0.1 }}
               className={cn(
 
-                  "border bg-background hover-glow border-primary/20 hover:border-primary/40 hover:glow-box hover:cursor-pointer p-5  rounded-2xl transition-all duration-300",
+                  "border z-1 bg-background hover-glow border-primary/20 hover:border-primary/40 hover:glow-box  hover:cursor-pointer p-5  rounded-2xl transition-all duration-300",
                   className
               )}
               

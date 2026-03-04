@@ -10,13 +10,13 @@ import {
   Quote,
 } from "lucide-react";
 
-import { useProfile } from "@/context/ProfileContext";
+import type { Profile } from "@/types";
 import { useLanguage } from "@/context/LanguageContext";
 import { Button } from "../ui/Button";
 import Card from "../ui/Card";
+type AboutProps = { profile: Profile };
 
-const AboutSection = () => {
-  const { profile, loading } = useProfile();
+const About = ({ profile }: AboutProps) => {
   const { language } = useLanguage();
 
   const highlightsAll = {
@@ -76,7 +76,7 @@ const AboutSection = () => {
 
   const highlights = highlightsAll[language];
 
-  if (loading) return null;
+
 
   return (
     <section id="about" className="py-10 bg-background/20 relative">
@@ -264,4 +264,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default About;

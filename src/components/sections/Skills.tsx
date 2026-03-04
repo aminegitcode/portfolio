@@ -104,46 +104,9 @@ function Skills() {
           </p>
         </motion.div>
 
-        {/* Filter nav */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-0 justify-center mb-10 bg-black/30  lg:px-2 rounded-2xl border border-white/5"
-        >
-          {categories.map((cat, index) => {
-            const color = colors[index % colors.length];
-            const isActive = activeSlug === cat.slug;
-
-            return (
-              <button
-                key={cat.slug}
-                onClick={() => setActiveSlug(cat.slug)}
-                
-                className={`relative flex items-center gap-2 px-6 py-3  font-medium transition-all duration-300 ${
-                  isActive
-                    ? `${color.text} bg-black/50 rounded-2xl`
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {cat.icon}
-                {cat.name}
-
-                {isActive && (
-                  <motion.div
-                    layoutId="activeTab"
-                    style={{ boxShadow: `0px -3px 10px ${color.raw}` }}
-                    className={`absolute bottom-0 left-0 right-0 h-0.5 rounded-full overflow-hidden ${color.bg}`}
-                  />
-                )}
-              </button>
-            );
-          })}
-        </motion.div>
       </div>
     </section>
-  );
+  ); 
 }
 
 export default Skills;

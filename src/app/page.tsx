@@ -1,15 +1,18 @@
-'use client'
-import About from "@/components/sections/About";
+
 import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
+import { getProfile } from "@/services/profile.service";
+import type { Profile } from "@/types";
 
+export default async function Home() {
+  const profile: Profile = await getProfile();
 
-export default function Home() {
   return (
-    <div className="">
-        <Hero/>
-        <About/>
-        <Skills/>
+    <div>
+      <Hero profile={profile} />
+      <About profile={profile} />
+      <Skills /> {/* plus besoin du profile ici */}
     </div>
   );
 }
