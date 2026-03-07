@@ -12,7 +12,7 @@ export default async function Home() {
     <div>
       <Hero profile={profile} />
       <About profile={profile} />
-      <Skills /> {/* plus besoin du profile ici */}
+      <Skills /> 
     </div>
   );
 }

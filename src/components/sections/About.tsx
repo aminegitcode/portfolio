@@ -79,7 +79,7 @@ const About = ({ profile }: AboutProps) => {
 
 
   return (
-    <section id="about" className="py-10 bg-background/20 relative">
+    <section id="about" className="py-5 pt-23 bg-background/20 relative">
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent via-primary/4 to-transparent"/>
 
       <div className="container mx-auto px-6">
@@ -89,7 +89,7 @@ const About = ({ profile }: AboutProps) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <h2 className="mb-3 text-3xl lg:text-4xl font-semibold">
             {language === "fr" ? (
