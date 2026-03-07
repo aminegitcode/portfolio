@@ -69,13 +69,13 @@ const colors = [
 
   const title =
     language === "fr" ? (
-      <><span className="gradient-text">Expertise</span> Technique</>
+      <><span className="gradient-text glow-text">Expertise</span> Technique</>
     ) : (
-      <>Technical <span className="gradient-text">Expertise</span></>
+      <>Technical <span className="gradient-text glow-text">Expertise</span></>
     );
 
   return (
-    <section id="skills" className="pt-20 pb-5  relative bg-background/60">
+    <section id="skills" className="pt-20 pb-10  relative bg-background/60">
       <div className="container mx-auto px-6 flex flex-col items-center">
 
         {/* Header */}
@@ -87,7 +87,7 @@ const colors = [
           className="text-center flex flex-col items-center mb-5"
         >
           <Badge className="mb-3">{language === "fr" ? "Compétences" : "Skills"}</Badge>
-          <h2 className="section-title mb-4">{title}</h2>
+          <h2 className="section-title mb-4 lg:text-5xl">{title}</h2>
           <p className="section-subtitle max-w-2xl">
             {language === "fr"
               ? "Voici les outils et technologies avec lesquels je travaille régulièrement pour créer des projets modernes et performants."
