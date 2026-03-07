@@ -6,7 +6,7 @@ export const getEducation = async () => {
   const { data, error } = await supabase
     .from("education")
     .select("*")
-    .order("order_index", { ascending: true });
+    .order("order_index", { ascending: false });
 
   if (error) throw error;
   return data as Education[];
