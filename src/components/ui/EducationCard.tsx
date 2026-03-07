@@ -4,13 +4,13 @@ import type { Education } from "@/types";
 
 
 const PERIOD_COLORS = [
-  "bg-primary/10 border-primary/20 text-primary",
-  "bg-secondary/10 border-secondary/20 text-secondary",
-  "bg-purple-400/10 border-purple-400/20 text-purple-400",
-  "bg-orange-400/10 border-orange-400/20 text-orange-400",
+    "bg-primary/10 border-primary/20 text-primary",
+    "bg-purple-400/10 border-purple-400/20 text-purple-400",
+    "bg-orange-400/10 border-orange-400/20 text-orange-400",
+    "bg-yellow-400/10 border-yellow-400/20 text-yellow-400",
+    "bg-pink-400/10 border-pink-400/20 text-pink-400",
+    "bg-secondary/10 border-secondary/20 text-secondary",
   "bg-blue-400/10 border-blue-400/20 text-blue-400",
-  "bg-pink-400/10 border-pink-400/20 text-pink-400",
-  "bg-yellow-400/10 border-yellow-400/20 text-yellow-400",
 ];interface EducationCardProps {
   edu: Education;
   language: string;
@@ -27,7 +27,7 @@ export default function EducationCard({ edu, language, isLast, index }: Educatio
     <div className="relative pl-10 transition-transform duration-300 hover:-translate-y-1">
       <div className="absolute left-0 top-6 -translate-x-1/2 w-3 h-3 rounded-full bg-primary border-2 border-background shadow-[0_0_8px] shadow-primary/50" />
 
-      <div className="bg-background/40 border border-primary/20 hover:border-primary/40 hover-glow hover:glow-box rounded-2xl p-6 transition-all duration-300 hover:bg-black/50 w-full">
+      <div className="bg-background/40 border border-primary/20 hover:border-primary/40 hover-glow  rounded-2xl p-6 transition-all duration-300 hover:bg-background/20 w-full">
         <div className="flex items-start gap-4">
 
           {edu.logo_url ? (
@@ -60,7 +60,7 @@ export default function EducationCard({ edu, language, isLast, index }: Educatio
               </div>
 
               {/* Period badge — couleur selon l'index de la card */}
-              <span className={`text-xs px-4 py-2 rounded-xl borderflex items-center gap-1.5 ${periodColor}`}>
+              <span className={`text-xs px-4 py-3 rounded-xl border flex items-center gap-1.5 ${periodColor}`}>
                 <Calendar className="w-3 h-3" />
                 {language === "fr" ? edu.period : edu.period_en}
               </span>
