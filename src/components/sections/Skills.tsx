@@ -87,7 +87,7 @@ const colors = [
           className="text-center flex flex-col items-center mb-5"
         >
           <Badge className="mb-3">{language === "fr" ? "Compétences" : "Skills"}</Badge>
-          <h2 className="text-3xl lg:text-4xl font-semibold mb-4">{title}</h2>
+          <h2 className="section-title mb-4">{title}</h2>
           <p className="section-subtitle max-w-2xl">
             {language === "fr"
               ? "Voici les outils et technologies avec lesquels je travaille régulièrement pour créer des projets modernes et performants."
