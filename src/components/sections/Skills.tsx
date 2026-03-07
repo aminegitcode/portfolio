@@ -7,6 +7,7 @@ import { Code, Server, Database, Cpu, Package } from "lucide-react";
 import { getSkills } from "@/services/skills.service";
 import type { Skill } from "@/types";
 import SkillCard from "@/components/ui/SkillCard";
+import Badge from "@/components/ui/Badge";
 
 function Skills() {
   const { language } = useLanguage();
@@ -85,9 +86,7 @@ const colors = [
           transition={{ duration: 0.6 }}
           className="text-center flex flex-col items-center mb-10"
         >
-          <div className="px-4 py-2 rounded-full mb-4 bg-primary/10 border border-primary/20 text-primary text-sm">
-            {language === "fr" ? "Compétences" : "Skills"}
-          </div>
+          <Badge className="mb-3">{language === "fr" ? "Compétences" : "Skills"}</Badge>
           <h2 className="text-3xl lg:text-4xl font-semibold mb-4">{title}</h2>
           <p className="section-subtitle max-w-2xl">
             {language === "fr"
