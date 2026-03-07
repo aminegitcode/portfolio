@@ -13,7 +13,7 @@ export type Profile = {
   github_url: string;
   linkedin_url: string;
   photo_url: string;
-  cv_url:string;
+  cv_url: string;
 };
 
 export type Project = {
@@ -54,6 +54,7 @@ export type Education = {
   logo_url: string | null;
   school_url: string | null;
   tags: string[] | null;
+  tags_en: string[] | null; 
   order_index: number;
   created_at: string;
 };
