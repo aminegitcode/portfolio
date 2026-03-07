@@ -48,7 +48,7 @@ const colors = [
       { icon: <Code className="w-4 h-4" />, name: "Frontend", slug: "frontend" },
       { icon: <Server className="w-4 h-4" />, name: "Backend", slug: "backend" },
       { icon: <Database className="w-4 h-4" />, name: "Base de données", slug: "database" },
-      { icon: <Cpu className="w-4 h-4" />, name: "Système", slug: "system_lowlevel" },
+      { icon: <Cpu className="w-4 h-4" />, name: "Système/Bas niveau", slug: "system_lowlevel" },
       { icon: <Package className="w-4 h-4" />, name: "Écosystème", slug: "ecosystem" },
     ],
     en: [
@@ -56,7 +56,7 @@ const colors = [
       { icon: <Code className="w-4 h-4" />, name: "Frontend", slug: "frontend" },
       { icon: <Server className="w-4 h-4" />, name: "Backend", slug: "backend" },
       { icon: <Database className="w-4 h-4" />, name: "Database", slug: "database" },
-      { icon: <Cpu className="w-4 h-4" />, name: "System", slug: "system_lowlevel" },
+      { icon: <Cpu className="w-4 h-4" />, name: "System / Low level", slug: "system_lowlevel" },
       { icon: <Package className="w-4 h-4" />, name: "Ecosystem", slug: "ecosystem" },
     ],
   };
@@ -111,7 +111,7 @@ const colors = [
               <button
                 key={cat.slug}
                 onClick={() => setActiveSlug(cat.slug)}
-                className={`relative flex items-center gap-2 px-8 py-3 font-medium transition-all duration-300 ${
+                className={`relative flex items-center gap-2 px-5 py-3 font-medium transition-all duration-300 ${
                   isActive
                     ? `${color.text}`
                     : "text-muted-foreground hover:text-foreground"
