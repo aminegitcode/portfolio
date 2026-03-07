@@ -48,7 +48,7 @@ const colors = [
       { icon: <Code className="w-4 h-4" />, name: "Frontend", slug: "frontend" },
       { icon: <Server className="w-4 h-4" />, name: "Backend", slug: "backend" },
       { icon: <Database className="w-4 h-4" />, name: "Base de données", slug: "database" },
-      { icon: <Cpu className="w-4 h-4" />, name: "Système/Bas niveau", slug: "system_lowlevel" },
+      { icon: <Cpu className="w-4 h-4" />, name: "Système / Bas niveau", slug: "system_lowlevel" },
       { icon: <Package className="w-4 h-4" />, name: "Écosystème", slug: "ecosystem" },
     ],
     en: [
@@ -75,7 +75,7 @@ const colors = [
     );
 
   return (
-    <section id="skills" className="py-10 relative bg-background/60">
+    <section id="skills" className="pt-20 pb-5  relative bg-background/60">
       <div className="container mx-auto px-6 flex flex-col items-center">
 
         {/* Header */}
@@ -84,7 +84,7 @@ const colors = [
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center flex flex-col items-center mb-10"
+          className="text-center flex flex-col items-center mb-5"
         >
           <Badge className="mb-3">{language === "fr" ? "Compétences" : "Skills"}</Badge>
           <h2 className="text-3xl lg:text-4xl font-semibold mb-4">{title}</h2>
@@ -101,7 +101,7 @@ const colors = [
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-0 justify-between mb-4 bg-black/50 lg:px-2 rounded-2xl border border-white/8 w-full max-w-5xl"
+          className="flex flex-wrap gap-0 justify-center lg:justify-between mb-4 bg-black/50 lg:px-2 rounded-2xl border border-white/8 w-full max-w-5xl"
         >
           {categories.map((cat, index) => {
             const color = colors[index % colors.length];
@@ -155,7 +155,7 @@ const colors = [
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.15 }}
-                className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-4"
+                className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"
               >
                 {filteredSkills.map((skill, index) => (
                   <SkillCard
