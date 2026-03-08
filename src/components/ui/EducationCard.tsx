@@ -2,13 +2,9 @@ import { MapPin, Calendar, ExternalLink, GraduationCap } from "lucide-react";
 import type { Education } from "@/types";
 
 const PERIOD_COLORS = [
-  "bg-blue-400/10 border-blue-400/20 text-blue-400",
-  "bg-purple-400/10 border-purple-400/20 text-purple-400",
-  "bg-orange-400/10 border-orange-400/20 text-orange-400",
-  "bg-yellow-400/10 border-yellow-400/20 text-yellow-400",
-  "bg-pink-400/10 border-pink-400/20 text-pink-400",
-  "bg-secondary/10 border-secondary/20 text-secondary",
+ 
   "bg-primary/10 border-primary/20 text-primary",
+  "bg-secondary/10 border-secondary/20 text-secondary",
 ];
 
 

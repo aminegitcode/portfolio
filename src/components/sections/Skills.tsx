@@ -87,7 +87,7 @@ const colors = [
           className="text-center flex flex-col items-center mb-5"
         >
           <Badge className="mb-3">{language === "fr" ? "Compétences" : "Skills"}</Badge>
-          <h2 className="section-title mb-4 lg:text-5xl">{title}</h2>
+          <h2 className="section-title  lg:text-5xl">{title}</h2>
           <p className="section-subtitle max-w-2xl">
             {language === "fr"
               ? "Voici les outils et technologies avec lesquels je travaille régulièrement pour créer des projets modernes et performants."
@@ -101,7 +101,7 @@ const colors = [
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap gap-0 justify-center lg:justify-between mb-4 bg-black/50 lg:px-2 rounded-2xl border border-white/8 w-full max-w-5xl"
+          className="flex flex-wrap gap-0 justify-center lg:justify-between mb-4 bg-black/40 lg:px-2 rounded-2xl border border-white/8 w-full max-w-5xl"
         >
           {categories.map((cat, index) => {
             const color = colors[index % colors.length];
@@ -137,7 +137,7 @@ const colors = [
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="bg-black/50 border border-white/8 w-full max-w-5xl rounded-2xl p-4"
+          className="bg-black/40 border border-white/8 w-full max-w-5xl rounded-2xl p-4"
         >
           {loading ? (
             <div className="text-muted-foreground text-sm text-center py-10">

@@ -22,7 +22,7 @@ function Education() {
   }, []);
 
   return (
-    <section id="education" className="relative bg-gradient-to-b from-background/20 via-primary/3 to-background/20 pt-20 pb-10">
+    <section id="education" className="relative bg-gradient-to-b from-background/30 via-primary/5 to-background/30 pt-20 pb-10">
       <div className="px-6 container flex flex-col mx-auto items-center">
         {/* Header */}
         <motion.div
@@ -46,7 +46,7 @@ function Education() {
               </>
             )}
           </h2>
-          <p className="section-subtitle max-w-2xl text-center mt-4">
+          <p className="section-subtitle max-w-2xl text-center ">
             {language === "fr"
               ? "Les établissements et formations qui ont construit mes compétences techniques et théoriques."
               : "The institutions and programs that shaped my technical and theoretical foundations."}
