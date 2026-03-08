@@ -74,6 +74,7 @@ export type Experience = {
 export type Certificate = {
   id: number;
   title: string;
+  title_en: string;
   issuer: string | null;
   issue_date: string | null;
   expiration_date: string | null;

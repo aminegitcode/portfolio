@@ -72,7 +72,7 @@ export default function CertificateCard({ cert, language, index, onClick }: Cert
           <span className="text-xs text-primary font-medium mb-1">{cert.issuer}</span>
         )}
         <h3 className="text-sm font-semibold text-foreground leading-snug mb-3 flex-1">
-          {cert.title}
+          {language==="fr"?cert.title:cert.title_en}
         </h3>
         <div className="flex items-center gap-1.5 mt-auto pt-3 border-t border-white/5 text-xs text-muted-foreground">
           <Calendar className="w-3 h-3" />

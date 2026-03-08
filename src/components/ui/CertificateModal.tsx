@@ -93,7 +93,7 @@ export default function CertificateModal({ cert, language, onClose }: Certificat
 
           {/* Title */}
           <h3 className="text-lg font-semibold text-foreground leading-snug mb-3">
-            {cert.title}
+            {language==="fr"?cert.title:cert.title_en}
           </h3>
 
           {/* Description */}
