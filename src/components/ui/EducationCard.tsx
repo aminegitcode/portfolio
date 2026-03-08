@@ -1,13 +1,11 @@
 import { MapPin, Calendar, ExternalLink, GraduationCap } from "lucide-react";
 import type { Education } from "@/types";
 
-const PERIOD_COLORS = [
+const COLORS = [
  
   "bg-primary/10 border-primary/20 text-primary",
   "bg-secondary/10 border-secondary/20 text-secondary",
 ];
-
-
 
 interface EducationCardProps {
   edu: Education;
@@ -19,7 +17,7 @@ interface EducationCardProps {
 export default function EducationCard({ edu, language, isLast, index }: EducationCardProps) {
   if (!edu) return null;
 
-  const periodColor = PERIOD_COLORS[index % PERIOD_COLORS.length];
+  const periodColor = COLORS[index % COLORS.length];
   const activeTags = language === "fr" ? edu.tags : edu.tags_en;
 
   return (
@@ -89,7 +87,7 @@ export default function EducationCard({ edu, language, isLast, index }: Educatio
                 {activeTags.map((tag, i) => (
                   <span
                     key={tag}
-                    className={`text-xs px-3 py-1.5 rounded-full border border-primary/20 bg-primary/10 text-primary`}
+                    className={`text-xs px-3 py-1.5 rounded-full border  ${COLORS[i % COLORS.length]}`}
                   >
                     {tag}
                   </span>
