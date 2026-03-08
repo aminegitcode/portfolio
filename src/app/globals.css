@@ -136,3 +136,6 @@ h5,
 h6 {
   font-family: "Space Grotesk", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

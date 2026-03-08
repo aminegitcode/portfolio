@@ -17,6 +17,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollTo = (href: string) => {
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsMobileMenuOpen(false);
+  };
+
   const Links = {
     fr: [
       { href: "#about", label: "À propos" },
@@ -47,48 +56,48 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border ${
         isScrolled
-          ? "glass-card  border-b border-gray-800/40"
+          ? "glass-card border-b border-gray-800/40"
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className=" container mx-auto px-6">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
-          <motion.a
-            href="#"
+          <motion.button
+            onClick={() => scrollTo("#hero")}
             className="font-bold text-xl gradient-text pr-3"
             whileHover={{ scale: 1.05 }}
           >
             Portfolio
-          </motion.a>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center lg:gap-1">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.href}
-                href={link.href}
+                onClick={() => scrollTo(link.href)}
                 className="px-3 lg:px-4 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
-              </a>
+              </button>
             ))}
-            {/* Toggle language */}
             <Button
               variant="ghost"
               onClick={toggleLanguage}
-              className="px-3 py-1= text-xs  lg:ml-5 bg-muted transition-colors"
+              className="px-3 py-1 text-xs lg:ml-5 bg-muted transition-colors"
             >
               {language === "fr" ? "FR" : "EN"}
             </Button>
           </div>
 
           {/* Mobile Menu and language toggle Button */}
-          <div className=" lg:hidden flex items-center    ">
+          <div className="lg:hidden flex items-center">
             <Button
               variant="ghost"
               onClick={toggleLanguage}
-              className="px-3 py-2 text-xs  lg:ml-5 bg-muted transition-colors"
+              className="px-3 py-2 text-xs lg:ml-5 bg-muted transition-colors"
             >
               {language === "fr" ? "EN" : "FR"}
             </Button>
@@ -109,21 +118,20 @@ const Navbar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="lg:hidden overflow-hidden border-t glass-card  border-gray-800/50"
+              className="lg:hidden overflow-hidden border-t glass-card border-gray-800/50"
             >
               <div className="py-2">
                 {navLinks.map((link, index) => (
-                  <motion.a
+                  <motion.button
                     key={link.href}
-                    href={link.href}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex items-center px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors rounded-lg mx-2"
+                    onClick={() => scrollTo(link.href)}
+                    className="flex w-full items-center px-4 py-3 text-sm text-muted-foreground hover:text-foreground hover:bg-secondary/50 transition-colors rounded-lg mx-2"
                   >
                     {link.label}
-                  </motion.a>
+                  </motion.button>
                 ))}
               </div>
             </motion.div>
