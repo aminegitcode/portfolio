@@ -7,6 +7,7 @@ import type { Profile } from "@/types";
 import Education from "@/components/sections/Education";
 import Projects from "@/components/sections/Projects";
 import Certificates from "@/components/sections/Certificates";
+import Comments from "@/components/sections/Comments";
 
 export default async function Home() {
   const profile: Profile = await getProfile();
@@ -19,6 +20,7 @@ export default async function Home() {
       <Education/>
       <Projects/>
       <Certificates/>
+      <Comments/>
     </div>
   );
 }

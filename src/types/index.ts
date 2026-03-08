@@ -90,6 +90,7 @@ export type Comment = {
   name: string;
   message: string;
   created_at: string;
+  is_pinned:boolean | false ;
 };
 
 export type Contact = {
