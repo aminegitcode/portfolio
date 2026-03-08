@@ -81,6 +81,7 @@ export type Certificate = {
   certificate_url: string | null;
   img_url: string | null;
   description: string | null;
+  tags: string[] | null;
   created_at: string;
 };
 

@@ -6,11 +6,18 @@ import { useEffect } from "react";
 
 function formatDate(dateStr: string | null, language: string) {
   if (!dateStr) return null;
-  return new Date(dateStr).toLocaleDateString(language === "fr" ? "fr-FR" : "en-US", {
-    month: "short",
-    year: "numeric",
-  });
+  return new Date(dateStr).toLocaleDateString(
+    language === "fr" ? "fr-FR" : "en-US",
+    {
+      month: "short",
+      year: "numeric",
+    },
+  );
 }
+const TAG_COLORS = [
+  "bg-primary/10 border-primary/20 text-primary",
+  "bg-secondary/10 border-secondary/20 text-secondary",
+];
 
 interface CertificateModalProps {
   cert: Certificate;
@@ -18,8 +25,14 @@ interface CertificateModalProps {
   onClose: () => void;
 }
 
-export default function CertificateModal({ cert, language, onClose }: CertificateModalProps) {
-  const isExpired = cert.expiration_date ? new Date(cert.expiration_date) < new Date() : false;
+export default function CertificateModal({
+  cert,
+  language,
+  onClose,
+}: CertificateModalProps) {
+  const isExpired = cert.expiration_date
+    ? new Date(cert.expiration_date) < new Date()
+    : false;
 
   // Close on Escape key
   useEffect(() => {
@@ -71,29 +84,35 @@ export default function CertificateModal({ cert, language, onClose }: Certificat
 
         {/* Content */}
         <div className="p-6">
-
           {/* Issuer + status */}
           <div className="flex items-center justify-between mb-2">
             {cert.issuer && (
-              <span className="text-xs text-primary font-medium">{cert.issuer}</span>
+              <span className="text-xs text-primary font-medium">
+                {cert.issuer}
+              </span>
             )}
-            <span className={`text-xs px-2.5 py-1 rounded-full border flex items-center gap-1.5
-              ${isExpired
-                ? "bg-red-500/10 border-red-500/20 text-red-400"
-                : "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
+            <span
+              className={`text-xs px-2.5 py-1 rounded-full border flex items-center gap-1.5
+              ${
+                isExpired
+                  ? "bg-red-500/10 border-red-500/20 text-red-400"
+                  : "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
               }`}
             >
               <ShieldCheck className="w-3 h-3" />
               {isExpired
-                ? (language === "fr" ? "Expiré" : "Expired")
-                : (language === "fr" ? "Valide" : "Valid")
-              }
+                ? language === "fr"
+                  ? "Expiré"
+                  : "Expired"
+                : language === "fr"
+                  ? "Valide"
+                  : "Valid"}
             </span>
           </div>
 
           {/* Title */}
           <h3 className="text-lg font-semibold text-foreground leading-snug mb-3">
-            {language==="fr"?cert.title:cert.title_en}
+            {language === "fr" ? cert.title : cert.title_en}
           </h3>
 
           {/* Description */}
@@ -102,18 +121,40 @@ export default function CertificateModal({ cert, language, onClose }: Certificat
               {cert.description}
             </p>
           )}
-
+          {cert.tags && cert.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5 mt-2 mb-3">
+              {cert.tags.slice(0, 3).map((tag, i) => (
+                <span
+                  key={tag}
+                  className={`text-xs px-2.5 py-1 rounded-full border ${TAG_COLORS[i % TAG_COLORS.length]}`}
+                >
+                  {tag}
+                </span>
+              ))}
+              {cert.tags.length > 3 && (
+                <span className="text-xs px-2.5 py-1 rounded-full border border-secondary/20 bg-secondary/10 text-secondary">
+                  more...
+                </span>
+              )}
+            </div>
+          )}
           {/* Dates */}
           <div className="flex items-center justify-between text-xs text-muted-foreground mb-6 pt-3 border-t border-white/5">
             {cert.issue_date && (
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-3 h-3" />
-                <span>{language === "fr" ? "Délivré" : "Issued"} {formatDate(cert.issue_date, language)}</span>
+                <span>
+                  {language === "fr" ? "Délivré" : "Issued"}{" "}
+                  {formatDate(cert.issue_date, language)}
+                </span>
               </div>
             )}
             {cert.expiration_date && (
-              <span className={isExpired ? "text-red-400" : "text-muted-foreground"}>
-                {language === "fr" ? "Expire" : "Expires"} {formatDate(cert.expiration_date, language)}
+              <span
+                className={isExpired ? "text-red-400" : "text-muted-foreground"}
+              >
+                {language === "fr" ? "Expire" : "Expires"}{" "}
+                {formatDate(cert.expiration_date, language)}
               </span>
             )}
           </div>
