@@ -1,4 +1,4 @@
-// types/index.ts
+
 
 export type Profile = {
   id: number;
