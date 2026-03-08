@@ -75,7 +75,7 @@ const colors = [
     );
 
   return (
-    <section id="skills" className="pt-20 pb-10  relative bg-background/60">
+    <section id="skills" className="pt-20 pb-10  relative bg-background">
       <div className="container mx-auto px-6 flex flex-col items-center">
 
         {/* Header */}
