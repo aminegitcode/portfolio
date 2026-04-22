@@ -160,8 +160,8 @@ const About = ({ profile }: AboutProps) => {
                   transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
                   className="absolute -top-2 -right-16 lg:top-1/3 px-4 py-2 glass-card rounded-full text-sm font-medium"
                 >
-                  <span className="text-primary">+5</span>{" "}
-                  {language === "fr" ? "ans d'expérience" : "years of experience"}
+                  <span className="text-primary">5</span>{" "}
+                  {language === "fr" ? "Certificats" : "Certificates"}
                 </motion.div>
 
                 <motion.div

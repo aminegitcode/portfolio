@@ -1,6 +1,7 @@
 import Navbar from "@/components/sections/Navbar";
 import { LanguageProvider } from "@/context/LanguageContext";
-
+import { ThemeProvider } from "@/context/ThemeContext";
+import { ThemePicker } from "@/components/ui/ThemePicker";
 import "./globals.css";
 
 export default function RootLayout({
@@ -10,13 +11,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">
-        <LanguageProvider>
-       
+      <body>
+        <ThemeProvider>
+          <LanguageProvider>
             <Navbar />
             <main>{children}</main>
-  
-        </LanguageProvider>
+            <ThemePicker />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

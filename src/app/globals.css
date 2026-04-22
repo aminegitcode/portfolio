@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: hsl(185 76% 50%);
+  --color-secondary: hsl(160 85% 60%);
+  --color-background: hsl(185 60% 3%);
+}
 @theme {
   /* Colors */
   --color-background: hsl(185 60% 3%);

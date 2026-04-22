@@ -38,7 +38,7 @@ export default function CommentCard({ comment, language, index }: CommentCardPro
         }`}
     >
       {/* Avatar — initiale */}
-      <div className="w-9 h-9 rounded-full bg-primary/8 flex items-center justify-center  text-sm font-bold text-primary">
+      <div className="w-9 h-9 rounded-2xl bg-primary/8 flex items-center justify-center  text-sm font-bold text-primary">
         <CircleUser strokeWidth={1} size={20}/>
       </div>
 
