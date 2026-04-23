@@ -1,15 +1,11 @@
 "use client";
 import { createContext, useContext, useState, useEffect } from "react";
 
-export const PRESETS = [
-  { label: "Teal / Green",  primary: "185 76% 50%", secondary: "160 85% 60%" },
-  { label: "Purple / Pink", primary: "270 76% 60%", secondary: "330 85% 65%" },
-  { label: "Blue / Cyan",   primary: "220 76% 55%", secondary: "190 85% 55%" },
-  { label: "Orange / Red",  primary: "25 90% 55%",  secondary: "0 85% 60%"   },
-  { label: "Rose / Violet", primary: "340 80% 58%", secondary: "280 75% 60%" },
-];
-
-type Preset = (typeof PRESETS)[0];
+export type Preset = {
+  label: string;
+  primary: string;
+  secondary: string;
+};
 
 type ThemeContextType = {
   primary: string;
