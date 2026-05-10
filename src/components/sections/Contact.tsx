@@ -109,11 +109,6 @@ function Contact() {
               </>
             )}
           </h2>
-          <p className="section-subtitle text-center max-w-2xl">
-            {language === "fr"
-              ? "Un projet en tête, une question ou juste envie de dire bonjour — je suis disponible."
-              : "A project in mind, a question, or just want to say hello — I'm available."}
-          </p>
         </motion.div>
 
         <div className="w-full max-w-5xl flex flex-col lg:flex-row gap-5">
@@ -165,8 +160,8 @@ function Contact() {
               <span className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_hsl(160,85%,60%,0.8)] animate-glow-pulse flex-shrink-0" />
               <span className="text-xs text-secondary/80">
                 {language === "fr"
-                  ? "Disponible pour de nouveaux projets"
-                  : "Available for new projects"}
+                  ? "Disponible pour de nouvelles opportunités"
+                  : "Open to new opportunities"}
               </span>
             </div>
           </motion.div>
