@@ -31,21 +31,12 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [secondary, setSecondary] = useState("160 85% 60%");
 
   useEffect(() => {
-    const p = localStorage.getItem("color-primary");
-    const s = localStorage.getItem("color-secondary");
-    if (p) setPrimary(p);
-    if (s) setSecondary(s);
-  }, []);
-
-  useEffect(() => {
     applyColors(primary, secondary);
   }, [primary, secondary]);
 
   const applyPreset = (preset: Preset) => {
     setPrimary(preset.primary);
     setSecondary(preset.secondary);
-    localStorage.setItem("color-primary", preset.primary);
-    localStorage.setItem("color-secondary", preset.secondary);
   };
 
   return (
