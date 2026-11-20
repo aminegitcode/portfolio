@@ -1,0 +1,132 @@
+[
+  {
+    "id": 2,
+    "school_name": "ESTIN - École Supérieure en Sciences et Technologies de l'Informatique et du Numérique",
+    "degree": "1re année Classe Préparatoire Informatique",
+    "description": "En première année de classe préparatoire informatique à l’ESTIN, j’ai renforcé mes compétences en mathématiques, algorithmique, programmation et technologies informatiques, tout en développant ma capacité à résoudre des problèmes complexes et à relever de nouveaux défis techniques.",
+    "created_at": "2025-12-15T03:24:19.801038+00:00",
+    "order_index": 2,
+    "location": "Bejaia, Algerie",
+    "field": "Informatique",
+    "logo_url": "/media/images/education/estin.jpg",
+    "school_url": "https://estin.dz/",
+    "degree_an": "1st Year Preparatory Class in Computer Science",
+    "description_en": "In the first year of the preparatory computer science program at ESTIN, I strengthened my skills in mathematics, algorithmics, programming, and computer technologies, while enhancing my ability to solve complex problems and tackle new technical challenges.",
+    "school_name_an": "ESTIN - Higher School of Computer Science and Digital Technologies",
+    "field_en": "Computer sience ",
+    "period": "2023 - 2024",
+    "period_en": "2023 - 2024",
+    "tags": [
+      "C",
+      "Assembleur",
+      "Mathématiques",
+      "Html"
+    ],
+    "tags_en": [
+      "C",
+      "Assembly",
+      "Mathematics",
+      "HTML"
+    ]
+  },
+  {
+    "id": 3,
+    "school_name": "Université Picardie Jules Verne",
+    "degree": "Licence Informatique - L1",
+    "description": "Acquisition de bases solides en mathématiques, algorithmique, programmation en C, architecture des ordinateurs et introduction aux bases de données. Développement de la logique algorithmique et des compétences en résolution de problèmes.",
+    "created_at": "2025-12-15T03:24:19.801038+00:00",
+    "order_index": 3,
+    "location": "Amiens, France",
+    "field": "Informatique",
+    "logo_url": "/media/images/education/upjv.png",
+    "school_url": "https://www.u-picardie.fr/formation/catalogue/licence-informatique",
+    "degree_an": "Bachelor’s Degree in Computer Science - Year 1",
+    "description_en": "Acquired foundational knowledge in mathematics, algorithms, C programming, computer architecture, and databases, developing strong problem-solving and logical thinking skills.",
+    "school_name_an": "Picardie Jules Verne university",
+    "field_en": "Computer sience ",
+    "period": "2024 - 2025",
+    "period_en": "2024 - 2025",
+    "tags": [
+      "C",
+      "SQL",
+      "Html",
+      "Mathématiques"
+    ],
+    "tags_en": [
+      "C",
+      "SQL",
+      "Html",
+      "Mathematics"
+    ]
+  },
+  {
+    "id": 6,
+    "school_name": "Université Picardie Jules Verne",
+    "degree": "Licence Informatique - L2",
+    "description": "Approfondissement en algorithmique avancée et graphes, programmation orientée objet en Java, développement web (HTML, PHP) et bases de données. Réalisation de projets pratiques renforçant autonomie, créativité technique et capacités à concevoir des solutions informatiques efficaces",
+    "created_at": "2026-03-07T23:06:30.050912+00:00",
+    "order_index": 4,
+    "location": "Amiens, France",
+    "field": "Informatique",
+    "logo_url": "/media/images/education/upjv.png",
+    "school_url": "https://www.u-picardie.fr/formation/catalogue/licence-informatique",
+    "degree_an": "Bachelor’s Degree in Computer Science - Year 2",
+    "description_en": "Strengthening skills in advanced algorithms, graph algorithms, object-oriented programming in Java, web development (HTML, PHP), and databases through practical projects that enhance autonomy, technical creativity, and software design abilities.",
+    "school_name_an": "Picardie Jules Verne university",
+    "field_en": "Computer sience ",
+    "period": "2025 - 2026",
+    "period_en": "2025 - 2026",
+    "tags": [
+      "C",
+      "SQL",
+      "PHP",
+      "Java",
+      "OCaml",
+      "Assembly",
+      "Graphs"
+    ],
+    "tags_en": [
+      "C",
+      "SQL",
+      "PHP",
+      "Java",
+      "OCaml",
+      "Assembly",
+      "Graphs"
+    ]
+  },
+  {
+    "id": 4,
+    "school_name": "Université Picardie Jules Verne\n",
+    "degree": "Licence Informatique - L3",
+    "description": "Approfondissement en programmation orientée objet, génie logiciel, conception de systèmes d’information, réseaux et systèmes, avec une ouverture sur la cryptographie et la sécurité. Travail en équipe sur des projets concrets, de l’analyse des besoins à la réalisation, renforçant rigueur, organisation et capacité à mener un projet de bout en bout.",
+    "created_at": "2026-11-20T11:57:09.957988+00:00",
+    "order_index": 5,
+    "location": "Amiens, France",
+    "field": "Informatique",
+    "logo_url": "/media/images/education/upjv.png",
+    "school_url": "https://www.u-picardie.fr/formation/catalogue/licence-informatique",
+    "degree_an": "Bachelor’s Degree in Computer Science - Year 3",
+    "description_en": "In-depth study of object-oriented programming, software engineering, information systems design, networks and operating systems, with an introduction to cryptography and security. Teamwork on real-world projects, from requirements analysis to implementation, strengthening rigor, organization and the ability to carry a project through from start to finish.",
+    "school_name_an": "Picardie Jules Verne university",
+    "field_en": "Computer sience ",
+    "period": "2026 - en cours",
+    "period_en": "2026 - ongoing",
+    "tags": [
+      "POO",
+      "UML",
+      "Réseaux",
+      "Linux",
+      "Cryptographie",
+      "Sécurité"
+    ],
+    "tags_en": [
+      "POO",
+      "UML",
+      "Networking",
+      "Linux",
+      "Cryptography",
+      "Security"
+    ]
+  }
+]

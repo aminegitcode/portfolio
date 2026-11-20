@@ -1,0 +1,194 @@
+[
+  {
+    "id": 7,
+    "name": "PHP",
+    "category": "backend",
+    "icon_url": "/media/images/skills/php.svg",
+    "created_at": "2026-01-26T03:35:19.393667+00:00",
+    "slug": "php"
+  },
+  {
+    "id": 14,
+    "name": "Linux",
+    "category": "system_lowlevel",
+    "icon_url": "/media/images/skills/Linux.svg",
+    "created_at": "2026-02-03T08:24:48.328232+00:00",
+    "slug": "linux"
+  },
+  {
+    "id": 3,
+    "name": "Tailwind CSS",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/tailwind_css.svg",
+    "created_at": "2026-01-26T03:06:53.29977+00:00",
+    "slug": "tailwind css\n"
+  },
+  {
+    "id": 9,
+    "name": "Bash",
+    "category": "system_lowlevel",
+    "icon_url": "/media/images/skills/Bash.svg",
+    "created_at": "2026-01-26T03:36:19.356978+00:00",
+    "slug": "bash"
+  },
+  {
+    "id": 5,
+    "name": "SQL",
+    "category": "database",
+    "icon_url": "/media/images/skills/sql.svg",
+    "created_at": "2026-01-26T03:34:29.053964+00:00",
+    "slug": "sql"
+  },
+  {
+    "id": 16,
+    "name": "Typescript",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/TypeScript.svg",
+    "created_at": "2026-02-04T02:09:17.765185+00:00",
+    "slug": "typescript "
+  },
+  {
+    "id": 15,
+    "name": "Next.js",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/nextjs.png",
+    "created_at": "2026-02-04T02:08:28.277963+00:00",
+    "slug": "next.js"
+  },
+  {
+    "id": 13,
+    "name": "Github",
+    "category": "ecosystem",
+    "icon_url": "/media/images/skills/github.png",
+    "created_at": "2026-02-03T08:24:01.063437+00:00",
+    "slug": "github \n"
+  },
+  {
+    "id": 17,
+    "name": "Bootstrap",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/bootstrap.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "bootstrap"
+  },
+  {
+    "id": 22,
+    "name": "Wireshark",
+    "category": "network_security",
+    "icon_url": "/media/images/skills/wireshark.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "wireshark"
+  },
+  {
+    "id": 18,
+    "name": "Oracle",
+    "category": "database",
+    "icon_url": "/media/images/skills/oracle.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "oracle"
+  },
+  {
+    "id": 2,
+    "name": "HTML",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/html.svg",
+    "created_at": "2026-01-26T03:06:25.313653+00:00",
+    "slug": "httml\n"
+  },
+  {
+    "id": 11,
+    "name": "Git",
+    "category": "ecosystem",
+    "icon_url": "/media/images/skills/git.svg",
+    "created_at": "2026-01-26T04:04:58.192026+00:00",
+    "slug": "git"
+  },
+  {
+    "id": 4,
+    "name": "CSS",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/css.svg",
+    "created_at": "2026-01-26T03:07:32.342742+00:00",
+    "slug": "css"
+  },
+  {
+    "id": 1,
+    "name": "React",
+    "category": "frontend",
+    "icon_url": "/media/images/skills/react.svg",
+    "created_at": "2026-01-26T03:04:39.971015+00:00",
+    "slug": "react"
+  },
+  {
+    "id": 12,
+    "name": "Java",
+    "category": "backend",
+    "icon_url": "/media/images/skills/java.svg",
+    "created_at": "2026-01-26T12:48:49.685791+00:00",
+    "slug": "java"
+  },
+  {
+    "id": 6,
+    "name": "C",
+    "category": "system_lowlevel",
+    "icon_url": "/media/images/skills/c.svg",
+    "created_at": "2026-01-26T03:35:02.9443+00:00",
+    "slug": "c"
+  },
+  {
+    "id": 8,
+    "name": "OCaml",
+    "category": "system_lowlevel",
+    "icon_url": "/media/images/skills/OCamll.svg",
+    "created_at": "2026-01-26T03:35:57.996221+00:00",
+    "slug": "ocaml\n"
+  },
+  {
+    "id": 21,
+    "name": "pfSense",
+    "category": "network_security",
+    "icon_url": "/media/images/skills/pfsense.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "pfsense"
+  },
+  {
+    "id": 20,
+    "name": "VMware",
+    "category": "network_security",
+    "icon_url": "/media/images/skills/vmware.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "vmware"
+  },
+  {
+    "id": 23,
+    "name": "Windows Server",
+    "category": "network_security",
+    "icon_url": "/media/images/skills/Windows_Server_logo.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "windows-server"
+  },
+  {
+    "id": 24,
+    "name": "Active Directory",
+    "category": "network_security",
+    "icon_url": "/media/images/skills/active-directory-1.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "active-directory"
+  },
+  {
+    "id": 26,
+    "name": "Figma",
+    "category": "conception",
+    "icon_url": "/media/images/skills/Figma.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "figma"
+  },
+  {
+    "id": 25,
+    "name": "UML",
+    "category": "conception",
+    "icon_url": "/media/images/skills/uml.svg",
+    "created_at": "2026-11-20T12:22:29.67815+00:00",
+    "slug": "uml"
+  }
+]

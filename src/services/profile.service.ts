@@ -1,12 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import profile from "@/data/profile.json";
 import type { Profile } from "@/types";
 
-export const getProfile = async () => {
-  const { data, error } = await supabase
-    .from("profile")
-    .select("*")
-    .single(); 
-
-  if (error) throw error;
-  return data as Profile;
-};
+export const getProfile = async () => profile as unknown as Profile;

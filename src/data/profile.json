@@ -1,0 +1,30 @@
+{
+  "id": 1,
+  "full_name": "Amine DJABRI",
+  "subtitle": "Guidé par la curiosité et l’innovation, je vise l’excellence en cybersécurité, un domaine où chaque donnée et chaque système mérite une protection sans faille. Créer et développer des applications web est ma façon de me détendre",
+  "hero_texts": [
+    "Étudiant en informatique",
+    "Passionné par la cybersécurité"
+  ],
+  "email": "djabri.aminee@gmail.com",
+  "github_url": "https://github.com/aminegitcode",
+  "linkedin_url": "https://www.linkedin.com/in/amine-djabri-953aa72bb?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B1wsMLehcQByQBm3dZdpIZA%3D%3D",
+  "photo_url": "/media/images/profile/img_profile.png",
+  "created_at": "2025-12-15T07:15:48.005597+00:00",
+  "hero_texts_en": [
+    "Computer Science Student",
+    "Cybersecurity Enthusiast"
+  ],
+  "subtitle_en": "Fueled by curiosity and innovation, I strive for excellence in cybersecurity, a field where every system and piece of data deserves flawless protection. Designing and developping web applications is my way to unwind",
+  "bio": [
+    "Mon parcours en informatique a commencé par une curiosité pour le fonctionnement des systèmes et des applications web, une curiosité qui m’a naturellement conduit vers l’univers de la cybersécurité.",
+    "En découvrant les enjeux liés à la protection des données, aux vulnérabilités et aux menaces numériques, j’ai compris que sécuriser les systèmes n’est pas seulement un défi technique, mais une responsabilité essentielle.",
+    "Aujourd’hui, tout en développant des applications web, je renforce progressivement mes compétences en cybersécurité en approfondissant mes connaissances et en intégrant les bonnes pratiques de sécurité dès la conception, avec l’ambition d’en faire le cœur de mon avenir professionnel."
+  ],
+  "bio_en": [
+    "My journey in computer science began with a curiosity about how systems and web applications work, a curiosity that naturally led me to the field of cybersecurity.",
+    "As I explored the challenges of data protection, vulnerabilities, and emerging digital threats, I realized that securing systems is not only a technical challenge but also a critical responsibility.",
+    "Today, while developing web applications, I continuously strengthen my cybersecurity skills by deepening my knowledge and integrating security best practices from the design stage, with the ambition of making it the core of my professional future."
+  ],
+  "cv_url": ""
+}

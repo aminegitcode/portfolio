@@ -1,13 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import projects from "@/data/projects.json";
 import type { Project } from "@/types";
 
-
-export const getProjects = async () => {
-  const { data, error } = await supabase
-    .from("projects")
-    .select("*")
-    ;
-
-  if (error) throw error;
-  return data as Project[];
-};
+export const getProjects = async () => projects as unknown as Project[];

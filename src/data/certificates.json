@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Advanced React",
+    "issuer": "Coursera",
+    "issue_date": "2025-02-13",
+    "certificate_url": "https://coursera.org/share/b4995f390f6685d6aa797a345921fcbc",
+    "description": null,
+    "created_at": "2025-12-15T09:01:00.13536+00:00",
+    "expiration_date": null,
+    "img_url": "/media/images/certifactes/advanced_react.jpg",
+    "title_en": "Learn Advanced React",
+    "tags": [
+      "React.js",
+      "Ui Components",
+      "Routing",
+      "Authentications",
+      "JavaScript",
+      "Data Management"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Certificat en Anglais",
+    "issuer": "OLS Aokas",
+    "issue_date": "2022-10-20",
+    "certificate_url": "/media/images/certifactes/CERTIFICAT - Anglais.pdf",
+    "description": null,
+    "created_at": "2026-03-08T05:56:11.796165+00:00",
+    "expiration_date": null,
+    "img_url": null,
+    "title_en": "Intermediate B English Certificate",
+    "tags": null
+  },
+  {
+    "id": 5,
+    "title": "Introduction to Cybersecurity",
+    "issuer": "Coursera",
+    "issue_date": "2026-04-21",
+    "certificate_url": "https://coursera.org/share/97e0d941c5ccaa8671fe8693f9d31f21",
+    "description": "",
+    "created_at": "2026-04-21T19:57:59.387419+00:00",
+    "expiration_date": null,
+    "img_url": "/media/images/certifactes/intoduction_to_cybersecurity.png",
+    "title_en": null,
+    "tags": null
+  },
+  {
+    "id": 2,
+    "title": "Les fondamentaux de génie logiciel ",
+    "issuer": "Lusis Technology",
+    "issue_date": "2023-10-20",
+    "certificate_url": "/media/images/certifactes/formation.pdf",
+    "description": null,
+    "created_at": "2026-03-08T05:40:49.962957+00:00",
+    "expiration_date": null,
+    "img_url": "",
+    "title_en": "Software Engineering Fundamentals.",
+    "tags": null
+  },
+  {
+    "id": 3,
+    "title": "Les fondamentaux de la maintenance informatique",
+    "issuer": "Lusis Technology",
+    "issue_date": "2023-10-20",
+    "certificate_url": "/media/images/certifactes/Formation_M.pdf",
+    "description": null,
+    "created_at": "2026-03-08T05:44:16.418964+00:00",
+    "expiration_date": null,
+    "img_url": null,
+    "title_en": "Fundamentals of Computer Maintenance",
+    "tags": null
+  }
+]

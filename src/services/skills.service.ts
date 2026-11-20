@@ -1,12 +1,4 @@
-import { supabase } from "@/lib/supabase";
+import skills from "@/data/skills.json";
 import type { Skill } from "@/types";
 
-
-export const getSkills = async () => {
-  const { data, error } = await supabase
-    .from("skills")
-    .select("*");
-
-  if (error) throw error;
-  return data as Skill[];
-};
+export const getSkills = async () => skills as unknown as Skill[];

@@ -1,13 +1,5 @@
-import { supabase } from "@/lib/supabase";
+import education from "@/data/education.json";
 import type { Education } from "@/types";
 
-
-export const getEducation = async () => {
-  const { data, error } = await supabase
-    .from("education")
-    .select("*")
-    .order("order_index", { ascending: false });
-
-  if (error) throw error;
-  return data as Education[];
-};
+export const getEducation = async () =>
+  [...(education as unknown as Education[])].sort((a, b) => b.order_index - a.order_index);

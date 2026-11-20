@@ -3,19 +3,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send } from "lucide-react";
 import { Button } from "../ui/Button";
-import { addComment, getComments } from "@/services/comments.service";
-import type { Comment } from "@/types";
+import { addComment } from "@/services/comments.service";
 
 interface CommentFormProps {
   language: string;
-  onNewComments: (comments: Comment[]) => void;
 }
 
-export default function CommentForm({ language, onNewComments }: CommentFormProps) {
+export default function CommentForm({ language }: CommentFormProps) {
   const [form, setForm] = useState({ name: "", message: "" });
   const [errors, setErrors] = useState<{ name?: string; message?: string }>({});
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   const validate = () => {
     const newErrors: { name?: string; message?: string } = {};
@@ -28,15 +27,15 @@ export default function CommentForm({ language, onNewComments }: CommentFormProp
   const handleSubmit = async () => {
     if (!validate()) return;
     setSubmitting(true);
+    setFailed(false);
     try {
-      await addComment({ name: form.name, message: form.message } as Comment);
-      const updated = await getComments();
-      onNewComments(updated as Comment[]);
+      await addComment({ name: form.name, message: form.message });
       setForm({ name: "", message: "" });
       setSuccess(true);
-      setTimeout(() => setSuccess(false), 3000);
+      setTimeout(() => setSuccess(false), 5000);
     } catch (err) {
       console.error(err);
+      setFailed(true);
     } finally {
       setSubmitting(false);
     }
@@ -102,10 +101,18 @@ export default function CommentForm({ language, onNewComments }: CommentFormProp
             exit={{ opacity: 0 }}
             className="text-xs text-emerald-400 text-center"
           >
-            {language === "fr" ? "Commentaire ajouté !" : "Comment posted!"}
+            {language === "fr"
+              ? "Merci ! Ton commentaire sera publié après validation."
+              : "Thanks! Your comment will appear once approved."}
           </motion.p>
         )}
       </AnimatePresence>
+
+      {failed && (
+        <p className="text-xs text-red-400 text-center">
+          {language === "fr" ? "Erreur lors de l'envoi, réessaie plus tard." : "Something went wrong, please try again later."}
+        </p>
+      )}
     </div>
   );
 }

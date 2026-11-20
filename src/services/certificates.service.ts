@@ -1,12 +1,7 @@
-import { supabase } from "@/lib/supabase";
+import certificates from "@/data/certificates.json";
 import type { Certificate } from "@/types";
 
-export const getCertificates = async () => {
-  const { data, error } = await supabase
-    .from("certificates")
-    .select("*")
-    .order("issue_date", { ascending: false });
+const time = (d: string | null) => (d ? new Date(d).getTime() : 0);
 
-  if (error) throw error;
-  return data as Certificate[];
-};
+export const getCertificates = async () =>
+  [...(certificates as unknown as Certificate[])].sort((a, b) => time(b.issue_date) - time(a.issue_date));

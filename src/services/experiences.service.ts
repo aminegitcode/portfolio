@@ -1,12 +1,7 @@
-import { supabase } from "@/lib/supabase";
+import experiences from "@/data/experiences.json";
 import type { Experience } from "@/types";
 
-export const getExperiences = async () => {
-  const { data, error } = await supabase
-    .from("experiences")
-    .select("*")
-    .order("start_date", { ascending: false });
+const time = (d: string | null) => (d ? new Date(d).getTime() : 0);
 
-  if (error) throw error;
-  return data as Experience[];
-};
+export const getExperiences = async () =>
+  [...(experiences as unknown as Experience[])].sort((a, b) => time(b.start_date) - time(a.start_date));

@@ -1,0 +1,134 @@
+[
+  {
+    "id": 3,
+    "title": "AEROMIN",
+    "description": "Un dashboard météo interactif développé en React.js, entièrement responsive et optimisé pour mobile, tablette et desktop",
+    "image_url": "/media/images/projects/aeromin.png",
+    "project_url": "https://aeromin.netlify.app/",
+    "github_url": "https://github.com/aminegitcode/AEROMIN.git",
+    "category": "web",
+    "created_at": "2026-01-26T16:25:07.497641+00:00",
+    "tags": [
+      "React",
+      "Tailwind",
+      "API",
+      "EmailJS"
+    ],
+    "description_en": "An interactive weather dashboard built with React.js, fully responsive and optimized for mobile, tablet, and desktop."
+  },
+  {
+    "id": 7,
+    "title": "GPS",
+    "description": "un programme capable de résoudre automatiquement des problèmes logiques à l’aide d’un moteur de raisonnement basé sur des règles.",
+    "image_url": "/media/images/projects/gps.png",
+    "project_url": null,
+    "github_url": "https://github.com/aminegitcode/GPS.git",
+    "category": "artificial intelligence",
+    "created_at": "2026-01-30T04:38:04.215459+00:00",
+    "tags": [
+      "C",
+      "BackTracking"
+    ],
+    "description_en": "A program capable of automatically solving logical problems using a rule-based reasoning engine"
+  },
+  {
+    "id": 6,
+    "title": "ANTI-RANCONGICIEL\n",
+    "description": "Un outil CLI pédagogique combinant scripts Bash et programmes en C pour détecter, analyser et restaurer des fichiers chiffrés après une attaque simulée par rançongiciel",
+    "image_url": "/media/images/projects/anti-rancongiciel.png",
+    "project_url": null,
+    "github_url": "https://github.com/aminegitcode/ANTI-RANCONGICIEL.git",
+    "category": "cyberSecurity ",
+    "created_at": "2026-01-30T04:34:10.870866+00:00",
+    "tags": [
+      "Bash",
+      "C"
+    ],
+    "description_en": "A pedagogical CLI tool combining Bash scripts and C programs to detect, analyze, and restore encrypted files after a simulated ransomware attack."
+  },
+  {
+    "id": 4,
+    "title": "TicTacToe",
+    "description": "Un jeu au design moderne et interactif, dans lequel les joueurs X et O s’affrontent sur le même écran, avec une interface élégante et responsive",
+    "image_url": "/media/images/projects/tictactoe.png",
+    "project_url": "https://tictactoehost.netlify.app/",
+    "github_url": "https://github.com/aminegitcode/TicTacToe.git",
+    "category": "web",
+    "created_at": "2026-01-27T08:25:48.706243+00:00",
+    "tags": [
+      "React",
+      "CSS"
+    ],
+    "description_en": "A game featuring a modern and interactive interface, where players X and O compete on the same screen in a sleek and responsive design."
+  },
+  {
+    "id": 5,
+    "title": "DAO",
+    "description": "Un logiciel de dessin assisté par ordinateur, développé en assembleur Motorola 68000 et exécuté sur le simulateur EASy68K, permettant de dessiner à l’écran à l’aide de la souris via une interface graphique simple.",
+    "image_url": "/media/images/projects/dao.png",
+    "project_url": null,
+    "github_url": "https://github.com/aminegitcode/DAO.git",
+    "category": "desktop",
+    "created_at": "2026-01-30T01:29:50.153155+00:00",
+    "tags": [
+      "Assembleur",
+      "Easy68k"
+    ],
+    "description_en": "A drawing software developed in 68000 assembly language and run on the EASy68K simulator, allowing users to draw on the screen using the mouse through a simple graphical interface."
+  },
+  {
+    "id": 11,
+    "title": "LAB RÉSEAU",
+    "description": "Un lab réseau virtualisé sous VMware avec des machines Linux et Windows, protégé par un pare-feu pfSense, intégrant les services DHCP et DNS, un domaine Active Directory et l'analyse du trafic avec Wireshark.",
+    "image_url": "/media/images/projects/lab-reseau.png",
+    "project_url": "https://github.com/aminegitcode/infrastructure-reseau-multi-sites.git",
+    "github_url": "https://github.com/aminegitcode/infrastructure-reseau-multi-sites.git",
+    "category": "network",
+    "created_at": "2026-11-20T12:19:01.206978+00:00",
+    "tags": [
+      "VMware",
+      "pfSense",
+      "Linux",
+      "Windows Server",
+      "Active Directory",
+      "DHCP",
+      "DNS",
+      "Wireshark"
+    ],
+    "description_en": "A virtualized network lab on VMware with Linux and Windows machines, secured by a pfSense firewall, featuring DHCP and DNS services, an Active Directory domain and network traffic analysis with Wireshark."
+  },
+  {
+    "id": 12,
+    "title": "Plateforme de suivi des stages et alternances",
+    "description": "Analyse et conception en équipe d'une plateforme de suivi des stages et alternances pour le Master MIAGE, reliant étudiant, tuteur entreprise, entreprise et tuteur universitaire : cahier des charges, modélisation UML et maquettes Figma.",
+    "image_url": "/media/images/projects/plateforme-alternance.png",
+    "project_url": null,
+    "github_url": null,
+    "category": "conception",
+    "created_at": "2026-11-20T12:19:01.206978+00:00",
+    "tags": [
+      "UML",
+      "Cahier des charges",
+      "Figma",
+      "Analyse des besoins"
+    ],
+    "description_en": "Team-based analysis and design of an internship and work-study tracking platform for the MIAGE Master's program, connecting students, company tutors, companies and academic tutors: specification document, UML modeling and Figma mockups."
+  },
+  {
+    "id": 10,
+    "title": "zooland",
+    "description": "Application web de gestion d’un zoo développée en PHP avec une base de données Oracle.\r\nCe projet permet de gérer les animaux, les espèces, les enclos, le personnel, les soins, les nourrissages, les parrainages, les boutiques et les réparations.\r\n\r\n",
+    "image_url": "/media/images/projects/zooland.png",
+    "project_url": "https://github.com/aminegitcode/zooland.git",
+    "github_url": "https://github.com/aminegitcode/zooland.git",
+    "category": "Web",
+    "created_at": "2026-04-23T21:38:28.833829+00:00",
+    "tags": [
+      "PHP",
+      "SQL",
+      "Oracle",
+      "Bootstrap"
+    ],
+    "description_en": "A zoo management web application developed in PHP with an Oracle database.\r\n\r\nThis project allows users to manage animals, species, enclosures, staff, care treatments, feedings, sponsorships, shops, and repairs."
+  }
+]

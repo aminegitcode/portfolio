@@ -71,7 +71,7 @@ function Comments() {
         {language === "fr" ? "Nouveau commentaire" : "New comment"}
       </h3>
     </div>
-    <CommentForm language={language} onNewComments={setComments} />
+    <CommentForm language={language} />
   </div>
 
   {/* Comments side */}

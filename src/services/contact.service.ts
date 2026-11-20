@@ -1,16 +1,11 @@
-import { supabase } from "@/lib/supabase";
 import type { Contact } from "@/types";
 
+// Le message est envoyé directement par mail via la route /api/contact (Resend)
 export const sendContact = async (contact: Contact) => {
-  const { error } = await supabase
-    .from("contacts")
-    .insert([contact]);
-
-  if (error) throw error;
-
-  await fetch("/api/contact", {
+  const res = await fetch("/api/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(contact),
   });
+  if (!res.ok) throw new Error("Échec de l'envoi du message");
 };

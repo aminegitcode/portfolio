@@ -1,22 +1,18 @@
-import { supabase } from "@/lib/supabase";
+import comments from "@/data/comments.json";
 import type { Comment } from "@/types";
 
-//read
-export const getComments = async () => {
-  const { data, error } = await supabase
-    .from("comments")
-    .select("*")
-    .order("created_at", { ascending: false });
+const time = (d: string) => new Date(d).getTime();
 
-  if (error) throw error;
-  return data;
-};
+// Lecture : commentaires validés, stockés dans src/data/comments.json
+export const getComments = async () =>
+  [...(comments as unknown as Comment[])].sort((a, b) => time(b.created_at) - time(a.created_at));
 
-//add
-export const addComment = async (comment: Comment) => {
-  const { error } = await supabase
-    .from("comments")
-    .insert([comment]);
-
-  if (error) throw error;
+// Envoi : le commentaire t'arrive par mail (Resend). Tu le valides en l'ajoutant à comments.json.
+export const addComment = async (comment: Pick<Comment, "name" | "message">) => {
+  const res = await fetch("/api/comment", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(comment),
+  });
+  if (!res.ok) throw new Error("Échec de l'envoi du commentaire");
 };
